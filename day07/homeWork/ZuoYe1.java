@@ -5,5 +5,7 @@ public class ZuoYe1 {
 }
 
 class Salary{
-	
+	public void xiangMuJingLi() {
+		
+	}
 }
