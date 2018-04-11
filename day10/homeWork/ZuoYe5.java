@@ -60,7 +60,6 @@ class Director extends Employee1{
 		super(id, sex, name, duty, salary, holidays);
 		// TODO Auto-generated constructor stub
 	}
-
 	@Override
 	public int getSubsidy(int day) {
 		holidays = day;
