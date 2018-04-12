@@ -1,0 +1,118 @@
+String 类
+
+不可变类;
+1 concat()
+2 length()
+3 equals()
+4 equalsIgnoreCase()
+5 toUpperCase()
+6 toLowerCase()
+7 indexOf()
+8 lastIndexOf()
+9 charAt()
+10 substring(start)
+11 substring(start,end)
+12 trim()
+13 replace(old,new)
+14 startsWith()
+15 endsWith()
+16 compareTo()
+
+常用方法：代码;
+----------------------------
+StringBuffer
+StringBuilder
+可变类.
+
+常用方法：代码；
+
+1. capacity()
+2. trimToSize()
+3. append()
+4. insert();
+5. setCharAt()
+6. deleteCharAt();
+7. delete();
+8. reverse()
+9. charAt()
+10.indexOf()
+11.lastIndexOf()
+--------------------------------
+区别：
+String
+  不可变类.
+  表示字符串类型。
+ 
+字符串 的内容 频繁的修改， 选择
+StringBuffer
+StringBuilder
+
+ 可变类。
+ 
+StringBuffer:线程安全，速度慢
+StingBuilder:线程非安全，但是 速度快
+
+
+------------------------------------
+正则：了解
+
+
+--------------------
+包装类
+
+  1.对于 值 要 使用对象来处理。
+  2.提供了 更丰富的方法。
+
+--------------------
+
+符号					描述
+\D			除了数字之外的任何字符，等价于[^0-9]
+\d 			匹配一个数字字符，等价于[0-9]
+\W  		任何非单词字符，等价于[^A-Za-z0-9_]
+\w 			任何单词字符，等价于[A-Za-z0-9_]
+. 			除了换行符之外的任意字符
+
+
+
+符号					描述
+{n} 		匹配前一项n次
+{n,m} 		匹配前一项n到m次
+*  			匹配前一项0次或多次，等价于{0, }
++ 			匹配前一项1次或多次，等价于{1, }
+？ 			匹配前一项0次或1次，也就是说前一项是可选的，等价于{0,1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
