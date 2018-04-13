@@ -1,0 +1,93 @@
+String 类
+
+不可变类;
+1 concat()  将指定字符串连接到此字符串的结尾。
+2 length() 	
+3 equals()	将此字符串与指定的对象比较。当且仅当该参数不为 null，
+			并且是与此对象表示相同字符序列的 String 对象时，结果才为 true。 
+4 equalsIgnoreCase() 不考虑大小写比较
+5 toUpperCase()
+6 toLowerCase()
+7 indexOf()	返回指定字符在此字符串中第一次出现处的索引。
+8 lastIndexOf()  返回指定字符在此字符串中第一次出现处的索引。
+9 charAt()  返回指定索引处的 char 值。
+10 substring(start)  返回一个新的字符串，它是此字符串的一个子字符串。
+11 substring(start,end)
+12 trim()	返回字符串的副本，忽略前导空白和尾部空白。
+13 replace(old,new)	返回一个新的字符串，它是通过用 new 替换此字符串中出现的所有 old 得到的。
+14 startsWith()	测试此字符串是否以指定的前缀开始。
+15 endsWith()	
+16 compareTo(String anotherString) 按字典顺序比较两个字符串
+17 valueOf()  返回 参数的字符串表示形式。
+
+常用方法：代码;
+----------------------------
+StringBuffer
+StringBuilder
+可变类.
+
+常用方法：代码；
+
+1. capacity()	
+2. trimToSize()
+3. append()
+4. insert();
+5. setCharAt()
+6. deleteCharAt();
+7. delete();
+8. reverse()
+9. charAt()
+10.indexOf()
+11.lastIndexOf()
+--------------------------------
+区别：
+String
+  不可变类.
+  表示字符串类型。
+ 
+字符串 的内容 频繁的修改， 选择
+StringBuffer
+StringBuilder
+
+ 可变类。
+ 
+StringBuffer:线程安全，速度慢
+StingBuilder:线程非安全，但是 速度快
+
+
+------------------------------------
+正则：了解
+
+
+--------------------
+包装类
+
+  1.对于 值 要 使用对象来处理。
+  2.提供了 更丰富的方法。
+
+byte -------> Byte 字节包装类
+char -------> Character 字符包装类
+short -------> Short 短整型包装类
+int -------> Integer 整型包装类
+long -------> Long 长整型包装类
+double -------> Double 双精度包装类
+float -------> Float 单精度包装类
+boolean -------> Boolean 布尔类型包装类
+
+--------------------
+
+符号					描述
+\D			除了数字之外的任何字符，等价于[^0-9]
+\d 			匹配一个数字字符，等价于[0-9]
+\W  		任何非单词字符，等价于[^A-Za-z0-9_]
+\w 			任何单词字符，等价于[A-Za-z0-9_]
+. 			除了换行符之外的任意字符
+
+
+
+符号					描述
+{n} 		匹配前一项n次
+{n,m} 		匹配前一项n到m次
+*  			匹配前一项0次或多次，等价于{0, }
++ 			匹配前一项1次或多次，等价于{1, }
+？ 			匹配前一项0次或1次，也就是说前一项是可选的，等价于{0,1}
