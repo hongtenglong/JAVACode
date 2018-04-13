@@ -1,0 +1,62 @@
+interface Food{
+    String getFoodName();//获得食物名字
+}
+class Bone implements Food{
+	private String foodName;
+	Bone(String foodName){
+		this.foodName = foodName;
+	}
+	@Override
+	public String getFoodName() {
+		return foodName;
+	}	
+}
+class Fish extends Animal implements Food{
+	private String foodName;
+	Fish(String foodName){
+		this.foodName = foodName;
+	}
+	@Override
+	public void eat(Food food) {
+		System.out.println("鱼吃……");
+	}
+	@Override
+	public String getFoodName() {
+		return foodName;
+	}
+	
+}
+abstract class Animal{
+	public abstract void eat(Food food);
+}
+class Dog extends Animal{
+	@Override
+	public void eat(Food food) {
+		System.out.println("小狗吃："+food.getFoodName());
+	}
+	
+}
+class Cat extends Animal{
+	@Override
+	public void eat(Food food) {
+		System.out.println("小猫吃："+food.getFoodName());
+	}
+	
+}
+class Feedter{
+	public void feed(Food food,Animal animal){
+		System.out.println("管理员喂养：");
+		animal.eat(food);
+	}
+}
+public class TestAnimalInteface {
+	public static void main(String[] args) {
+		Dog dog = new Dog();
+		Cat cat = new Cat();
+		Bone bone = new Bone("骨头");
+		Fish fish = new Fish("鱼");
+		Feedter guojing = new Feedter();
+		guojing.feed(bone, dog);
+		guojing.feed(fish, cat);
+	}
+}
