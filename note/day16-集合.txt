@@ -1,0 +1,89 @@
+工具类：
+ Collections方法
+
+
+-------------------------------------------
+
+Collection
+  |
+ Queue  队  ：先进先出
+  | -  PriorityQueue 优先队列，排序（Comparable,Comparator）
+ Deque  双端队列： 模拟 队  和  栈
+  |
+ ArrayDeque
+ LinkedList
+
+--------------------------------------------
+Map  映射 存的 是 键值对 （键 是唯一的）
+
+ |  HashMap类 -> LinkedHashMap子类
+    Hashtable类
+ SortedMap接口
+ |
+ NavigableMap接口
+ |
+TreeMap类
+--------------------------------------
+实现类：
+  HashMap :线程非安全的
+  Hashtable:线程安全的，性能低。
+  
+  LinkedHashMap：链表 ,添加的顺序维护顺序
+  TreeMap:二叉树 ，顺序 ，自然顺序，比较器
+
+  HashMap > LinkedHashMap > TreeMap
+
+-------------------------------------------
+Stream
+
+IntStream,LongStream,DoubleStream
+
+聚集
+流
+
+一次性的，临时的 统计。
+
+方法：
+
+  末端：
+    一次性的操作 。
+
+
+  中间：
+    返回了一个新的流对象
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
