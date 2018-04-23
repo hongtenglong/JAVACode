@@ -1,0 +1,105 @@
+se:
+反射机制
+网络编程(socket  传输层)
+
+
+ee:
+mysql   (重点)
+jdbc(java连接数据库)
+html/css/javaScript
+servlet/jsp(javaweb) (前后台交互)
+框架:  SSM(Spring / SpringMVC /Mybatis)
+maven(项目构建和管理)
+
+linux系统(centos)
+redis(nosql: not only sql)
+
+
+        javac           java
+ .java  -----> .class   ---->    java虚拟机(HotSpot)
+        编译            运行           
+
+  package com.lee;
+  class A{
+    
+    private int a;
+  
+  
+    public void aa(){}
+  }
+  
+  public class TestA{
+  
+     main(){
+	  
+	   Class clz =....A（类所有信息）
+	   
+	   //a所对应的Field对象(包含了a所有信息)
+	   
+	   //aa对应的Method对象
+		
+	 }
+  }
+ 
+ interface Fruit{
+ 
+ }
+ 
+ class Apple imple {
+ 
+ }
+ 
+ class Or  im {
+ 
+ }
+ 
+ class Person{
+ 
+   buy(Fruit a){
+   
+   }
+ }
+ 
+ 
+ public class Test{
+   main(){
+   
+     Person p = new Person()
+	 
+	 //p.buy(new Apple());
+ 
+	Class.forName();
+ 
+   }
+ 
+ }
+ 
+ 线程同步:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 类的加载:
+ 1.  .class(字节码)文件加载到内存中
+ 2.  ClassLoader(类加载器)获取Class对象
+ 3.  Class对象(reflect包)可以获取类的所有的信息
+ 4.  创建对象，获取属性方法等
+ 
+		
+		
+
