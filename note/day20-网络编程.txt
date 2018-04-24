@@ -1,0 +1,99 @@
+1	Cglib动态代理(增强框架)
+1.1	 实现类(目标类)
+1.2	 代码
+
+YifengLee yi = new YifengLee();
+		//对象
+		Enhancer enhancer = new Enhancer();
+		//设置父类(获取方法)
+		enhancer.setSuperclass(YifengLee.class);
+		//代理方法实现处理（拦截每一个目标方法）
+		enhancer.setCallback(new MethodInterceptor() {
+			@Override
+			public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) 
+					throws Throwable {
+				System.out.println("热身");
+				Object obj = method.invoke(yi, args);
+				//methodProxy.invokeSuper(arg0, arg1)
+				System.out.println("擦汗");
+				return obj;
+			}
+		});
+		//创建代理对象
+		YifengLee yiLee = (YifengLee) enhancer.create();
+		yiLee.play();
+		yiLee.swim();
+
+2	网络编程
+2.1	 什么是网络
+多台计算机连接形成网络
+2.2	 网络的作用
+数据交互
+资源共享
+2.3	网络分类(区域)
+2.3.1	局域网 
+2.3.2	城域网
+2.3.3	广域网
+2.4	三要素
+2.4.1	IP地址
+2.4.2	端口
+2.4.3	通讯协议
+2.5	IP地址
+2.5.1	标志计算机的地址(唯一标识)
+2.5.2	组成:
+2.5.2.1	IPV4: 32位二进制数据组成
+2.5.2.1.1	4个8位二进制
+2.5.2.1.2	网络地址+主机地址
+2.5.2.1.3	C类网络(192-223)  3段网络地址 + 1段主机地址
+2.5.3	常用标志
+2.5.3.1	本机回环地址:127.0.0.1
+2.5.3.2	本机主机名称:localhost
+2.5.3.3	查看ip:
+2.5.3.3.1	windows: ipconfig
+2.5.3.3.2	linux: ifconfig
+2.5.3.4	ping
+2.5.3.4.1	测试网络连通状态
+2.5.4	端口号
+2.5.4.1	0-65535
+2.5.4.2	公认端口: 0-1023
+2.5.4.3	动态端口:1024-65535
+2.5.5	通讯协议
+2.5.5.1	通信协议是指双方实体完成通信或服务所必须遵循的规则和约定
+2.5.5.2	协议
+2.5.5.2.1	Osi协议
+ 
+2.5.5.3	Dns
+2.5.5.3.1	域名系统
+2.5.5.3.1.1	域名解析
+2.6	Ip操作
+
+//1.获取本机ip地址
+		InetAddress address = InetAddress.getLocalHost();
+		String hostName = address.getHostName();
+		String ip = address.getHostAddress();
+		System.out.println(hostName+":"+ip);
+		
+		//2.获取指定ip信息
+		InetAddress address2 = InetAddress.getByName("192.168.1.152");
+		System.out.println(address2.getHostName());
+		
+		//3.访问百度ip信息
+		InetAddress[] addresses = InetAddress.getAllByName("www.baidu.com");
+		for (InetAddress inetAddress : addresses) {
+			System.out.println(inetAddress.getHostAddress());
+		}
+
+2.7	TCP和UDP协议
+2.7.1	TCP(掌握)
+2.7.1.1	面向连接的，安全传输协议。
+2.7.1.2	三次握手
+2.7.1.3	适合大量数据传输
+2.7.1.4	缺点:慢
+2.7.2	UDP
+2.7.2.1	面向无连接，不安全协议
+2.7.2.2	速度快
+2.7.2.3	传输数据量小。64k
+2.7.2.4	视频会话，qq等即时通讯
+2.8	网络编程
+2.8.1	本质就是scoket编程(套接字)
+2.8.2	

@@ -1,0 +1,41 @@
+复习:
+   深入理解JVM
+  1.类加载过程
+	 .java -->编译   .class  -->运行 jvm
+	 .class文件加载，ClassLoader创建Class对象(该类所有信息)，每一个类只有一个Class对象
+  2.类加载器
+	 根类加载器
+	 扩展类加载器
+	 系统类加载器
+  3.反射
+	3.1  Class类:  入口   (三种)
+		 Class.forName(全限定名称)
+		 类名.class
+		 对象.getClass()
+	3.2  Field类：属性   (四个)
+	     两种:公共
+		 两种:所有
+	     field.getInt()  基本
+		 field.get()    引用
+		 field.setInt()
+		 field.set()
+		 field.setAccessiable(true) 权限
+	3.3  Method类:  方法(四个)
+	     执行
+	     Object obj = method.invoke(obj,参数(可变参))
+	3.4 Constructor类: 构造器
+		 constructor.newInstance(...);
+   4.代理
+	 4.1 什么是代理
+	 4.2 代理分类
+	     接口+实现类
+		静态代理
+		动态代理
+		   JDK
+		   cglib
+		   
+		   
+    多台计算机连接形成网络。
+	
+		 
+	 
