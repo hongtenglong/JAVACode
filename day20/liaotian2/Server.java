@@ -41,11 +41,12 @@ public class Server {
 				}
 			}).start();
 			// System.out.println("测试");
-
+			
 			byte[] buf = new byte[1024];
 			try {
 				// System.out.println("服务端正在等待数据");
 				socket.receive(new DatagramPacket(buf, buf.length));
+				
 				//System.out.println(new String(buf));
 				// System.out.println("服务端已获得数据");
 				// System.out.println(new String(buf));
